@@ -1,0 +1,21 @@
+/* 8. Category */
+.single-category {
+    padding: 100px 16px;
+    background: $dark;
+    border: 1px solid $border;
+    @include transition(.3s);
+    display: grid; /* Enable grid layout */
+    grid-template-rows: auto 1fr auto; /* Define grid rows: image, content, open jobs */
+    align-items: center; /* Center content horizontally */
+    &:hover {
+      background: $light;
+      border: 1px solid transparent;
+      @include box-shadow(0px 10px 30px $shadow);
+    }
+    img {
+      grid-row: 1; /* Position image in the first row */
+    }
+    h4, h5 {
+      grid-row: 2; /* Position headings in the second row */
+    }
+  }
