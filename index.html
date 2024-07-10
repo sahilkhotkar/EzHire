@@ -427,18 +427,46 @@
     </section>
     <dialog id="cardDialog">
         <form action="">
-            <h4>Send Enquiry</h4>
+            <div class="container mt-2">
+                <h4>Send Enquiry</h4>
+                <p id="cardIdDisplay"></p>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="1"
+                                placeholder="Enter your message"></textarea>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <!-- <h4>Send Enquiry</h4>
             <p id="cardIdDisplay"></p>
             <div class="">
                 <input type="text" id="name" placeholder="Enter your name" onblur="this.placeholder = 'Enter your name'"
                     required>
                 <input type="email" id="email" placeholder="Enter email address" onfocus="this.placeholder = ''"
-                    onblur="this.placeholder = 'Enter email address'" required>
+                    onblur="this.placeholder = 'Enter email address'" required> -->
 
-                <!-- <input type="text" id="subject" placeholder="Enter subject" onfocus="this.placeholder = ''"
+            <!-- <input type="text" id="subject" placeholder="Enter subject" onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'Enter subject'" required> -->
 
-
+            <!-- 
             </div>
             <div style="height: .6em;"></div>
             <div class="">
@@ -447,7 +475,7 @@
                 <input name="message" id="message" placeholder="Enter Message" onfocus="this.placeholder = ''"
                     onblur="this.placeholder = 'Enter Message'" required>
 
-            </div>
+            </div> -->
         </form>
         <div class="forbuttonrow">
             <button id="closeDialog" class="mt-2">Close</button>
@@ -847,7 +875,7 @@
     <!-- Employee Area End -->
 
     <!-- News Area Starts -->
-    <section id="blog" class="news-area section-padding3 pt-4 ">
+    <section id="blog" class="news-area  pt-4 ">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -857,27 +885,13 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-news mb-5 mb-lg-0">
-                        <div class="news-img news-img1"></div>
-                        <div class="news-tag">
-                            <ul class="my-4">
-                                <li>
-                                    <h5><i class="fa fa-calendar-o"></i> 20th sep, 2018</h5>
-                                </li>
-                                <li class="separator mx-2"><span></span></li>
-                                <li>
-                                    <h5><i class="fa fa-folder-open-o"></i> company</h5>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="news-title">
-                            <h4><a href="#">Lime recalls electric scooters over battery fire.</a></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
+
+            <div class="row" id="blog-container">
+
+                <!-- <div class="col-lg-4 col-md-6">
+
+                </div> -->
+                <!-- <div class="col-lg-4 col-md-6">
                     <div class="single-news mb-5 mb-lg-0">
                         <div class="news-img news-img2"></div>
                         <div class="news-tag">
@@ -887,7 +901,7 @@
                                 </li>
                                 <li class="separator mx-2"><span></span></li>
                                 <li>
-                                    <h5><i class="fa fa-folder-open-o"></i> company</h5>
+                                    <h5><i class="fa fa-folder-open-o"></i> EzHire</h5>
                                 </li>
                             </ul>
                         </div>
@@ -915,7 +929,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <!-- News Area End -->
@@ -970,17 +984,20 @@
                                 <li class="mb-2"><a href="about.html">About Us</a></li>
                                 <li class="mb-2"><a id="categoryLinkFooter" href="#">Categories</a></li>
                                 <li class="mb-2"><a href="contact-us.html">Contact Us</a></li>
-                                <!-- <li><a href="#">marketing service</a></li> -->
+                                <!-- <li><a href="#">marketing service</service-buttonquera></li> -->
                             </ul>
+
                         </div>
                     </div>
                     <div class="col-xl-3 offset-xl-1 col-lg-3">
                         <div class="single-widge-home">
                             <h3 class="mb-4">Services</h3>
                             <ul>
-                                <li class="mb-2"><a href="about.html">About Us</a></li>
-                                <li class="mb-2"><a id="categoryLinkFooter" href="#">Categories</a></li>
-                                <li class="mb-2"><a href="contact-us.html">Contact Us</a></li>
+                                <li class="mb-2">
+                                    <button id="Sales & Marketing" class="service-button" style="background-color: transparent;" id><a href="">Sales & Marketing</a></li></button>
+                                    
+                                <li class="mb-2"><button id="Production & Engineering" class="service-button"><a id="categoryLinkFooter" href="">Production & Engineering</a></button></li>
+                                <li class="mb-2"><button id="Accounting & Finance" class="service-button"><a href="">Accounting & Finance</a></button></li>
                                 <!-- <li><a href="#">marketing service</a></li> -->
                             </ul>
                         </div>
@@ -1015,10 +1032,11 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="social-icons">
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
+                                <li><a href="https://www.linkedin.com/company/the-ezhire-contour/"><i
+                                            class="fa fa-linkedin"></i></a></li>
+                                <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
+                                <!-- <li><a href="#"><i class="fa fa-behance"></i></a></li> -->
                             </ul>
                         </div>
                     </div>
@@ -1030,6 +1048,40 @@
 
 
     <!-- Javascript -->
+    <script>
+        fetch('blogs.json')
+            .then(response => response.json())
+            .then(data => {
+                const blogs = data;
+                const blogsContainer = document.getElementById('blog-container');
+                data.forEach(blog => {
+                    const blogCard = document.createElement('div');
+                    blogCard.classList.add('blog-card');
+                    const blogLink = document.createElement('a');
+                    blogLink.href = blog.onclick; // Set href dynamically from blog.url
+                    blogLink.textContent = 'Read More';
+                    // Create image element (if image URL exists)
+                    // if (blog.imageUrl) {
+                        const blogImage = document.createElement('img');
+                        blogImage.src = blog.imageurl;
+                        
+                        blogCard.appendChild(blogImage);
+                    // }
+
+                    const blogTitle = document.createElement('h4');
+                    blogTitle.classList.add('mt-2');
+                    blogTitle.textContent = blog.title;
+                    blogCard.appendChild(blogTitle);
+
+                    const blogDate = document.createElement('p');
+                    blogDate.textContent = blog.date;
+                    
+                    blogCard.appendChild(blogDate);
+                    blogCard.appendChild(blogLink);
+                    blogsContainer.appendChild(blogCard);
+                });
+            });
+    </script>
     <script src="index.js"></script>
     <script>
         $(window).on('scroll', function () {
@@ -1211,13 +1263,38 @@
             counter("count1", 4, 15, 107);
             counter("count2", 6, 15, 89);
             counter("count3", 0, 67, 21);
+
+
+
             // counter("count4", 10, 56, 1000);
         });
         const categoryLink = document.getElementById('categoryLink');
         const categoryLinkFooter = document.getElementById('categoryLinkFooter');
         const exploreMoreButton = document.getElementById('exploreMoreButton');
         const categoryCard = document.querySelectorAll('.service-card');
+        const serviceButton = document.querySelectorAll('.service-button');
+        var cardTitleDisplay = document.getElementById('cardTitleDisplay');
+        var cardIdDisplay = document.getElementById('cardIdDisplay');
+        var dialog = document.getElementById('cardDialog');
+        serviceButton.forEach((button)=>{
+            
+            button.addEventListener('click',(e)=>{
 
+                e.preventDefault();
+                const buttonId = button.id;
+                cardIdDisplay = document.getElementById('cardIdDisplay');
+                 cardTitleDisplay = document.getElementById('cardTitleDisplay');
+                 
+
+                cardIdDisplay.textContent = `${buttonId}`;
+                category = button.id;
+                console.log("hey");
+                dialog.showModal();
+            });
+        });
+        dialog.querySelector('button').addEventListener('click', () => {
+                    dialog.close(); // Close the dialog box on button click
+                });
         categoryLink.addEventListener('click', function (event) {
             event.preventDefault();
             window.scrollTo({ top: document.body.scrollHeight / 5.5, behavior: 'smooth' });
@@ -1239,9 +1316,9 @@
             card.addEventListener('click', (event) => {
                 const cardId = card.id;
                 category = card.id;
-                const dialog = document.getElementById('cardDialog');
-                const cardIdDisplay = document.getElementById('cardIdDisplay');
-                const cardTitleDisplay = document.getElementById('cardTitleDisplay');
+                 dialog = document.getElementById('cardDialog');
+                 cardIdDisplay = document.getElementById('cardIdDisplay');
+                 cardTitleDisplay = document.getElementById('cardTitleDisplay');
                 const clickedElement = event.target;
 
                 cardIdDisplay.textContent = `${cardId}`;
