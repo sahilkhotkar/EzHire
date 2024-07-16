@@ -237,7 +237,7 @@ textarea:focus {
 }
 
 .main-menu ul li a {
-    color: #222;
+    color: white;
     font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
     font-size: 14px;
@@ -370,11 +370,11 @@ textarea:focus {
     right: 0px;
     background: #795fff;
     padding: 7px 10px;   
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    border-radius: 3px;
+    /* -webkit-border-radius: 3px; */
+    /* -moz-border-radius: 3px; */
+    /* -ms-border-radius: 3px; */
+    /* -o-border-radius: 3px; */
+    /* border-radius: 3px; */
     -webkit-transition: .2s;
     -moz-transition: .2s;
     -o-transition: .2s;
@@ -930,7 +930,7 @@ textarea:focus {
 
 .advertisers-service-sec .service-card {
     /* width: 100%; */
-    /* height: 100%; */
+    height: 100%;
     padding: 2em 1.5em;
     border-radius: 5px;
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
@@ -1018,6 +1018,13 @@ textarea:focus {
         margin: 30px 0
     }
 }
+@media (max-width: 575.98px) {
+    .service-card {
+        width: 100%;;
+    }
+}
+
+
 
 .single-job .job-btn {
     text-align: center
@@ -3928,7 +3935,7 @@ form .template-btn {
 }
 
 .section-padding {
-    padding: 140px 0
+    padding: 3rem 0
 }
 
 .section-padding2 {
@@ -3990,7 +3997,12 @@ form .template-btn {
     object-fit: cover;
 
 }
-
+.main-menu.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other content */
+}
 @keyframes cambio {
 
     from {
