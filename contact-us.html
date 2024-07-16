@@ -42,12 +42,21 @@
                         </div>
                     </div>
                     <div class="col-lg-10">
-                        <div class="custom-navbar">
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                        <div class="custom-navbar fixed-top">
+                            <div class="navrow">
+                                <div class="col-lg-2"> <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="col-lg-8">
+                                    <a href="index.html"><img class="logoimg" src="assets/images/navbarlogo.jpg" alt="logo"
+                                        style="width: 152px;height: 33;"></a>
+                                </div>
+    
+                            </div>
+    
                         </div>
-                        <div class="main-menu main-menu-light">
+                        <div class="main-menu">
                             <ul>
                                 <li class="active"><a href="index.html">home</a></li>
                                 <li><a href="about.html">about us</a></li>
@@ -137,7 +146,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-9" style="display: flex; height: max-content;">
+                <div class="col-lg-9 " style="display: flex; height: max-content;">
                     <form action="#">
                         <div class="left">
                             <input type="text" id="name" placeholder="Enter your name*" onfocus="this.placeholder = ''"
@@ -179,22 +188,79 @@
                             </div>
                         </div>
 
-                        <div class="right mt-2" style="height: 100%;">
-                            <textarea name="message" id="message" cols="20" rows="7" placeholder="Enter Message"
+                        <div class="right mt-2" style="">
+                            <textarea name="message" id="message" cols="10" rows="7" placeholder="Enter Message"
                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'"
                                 required></textarea>
-                                <button type="submit" class="template-btn" id="submitButton">subscribe
-                                    now</button>
+                            <button type="submit" class="template-btn" id="submitButton">subscribe
+                                now</button>
                         </div>
-                        
-                        
-                        
+
+
+
                     </form>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Contact Form End -->
+    <dialog id="cardDialog">
+        <form action="">
+            <div class="container mt-2">
+                <h4>Send Enquiry</h4>
+                <p id="cardIdDisplay"></p>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="1"
+                                placeholder="Enter your message"></textarea>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <!-- <h4>Send Enquiry</h4>
+            <p id="cardIdDisplay"></p>
+            <div class="">
+                <input type="text" id="name" placeholder="Enter your name" onblur="this.placeholder = 'Enter your name'"
+                    required>
+                <input type="email" id="email" placeholder="Enter email address" onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter email address'" required> -->
+
+            <!-- <input type="text" id="subject" placeholder="Enter subject" onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter subject'" required> -->
+
+            <!-- 
+            </div>
+            <div style="height: .6em;"></div>
+            <div class="">
+                <input type="text" id="phone" placeholder="Enter phone number" onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter phone number'" required>
+                <input name="message" id="message" placeholder="Enter Message" onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter Message'" required>
+
+            </div> -->
+        </form>
+        <div class="forbuttonrow">
+            <button id="closeDialog" class="mt-2">Close</button>
+            <div style="width: 0.3rem;"></div>
+            <button id="submitButton" class="mt-2">Get a call!</button>
+        </div>
+    </dialog>
 
 
     <!-- Footer Area Starts -->
@@ -204,12 +270,26 @@
                 <div class="row">
                     <div class="col-xl-2 col-lg-3">
                         <div class="single-widget-home mb-5 mb-lg-0">
-                            <h3 class="mb-4">top products</h3>
+                            <h3 class="mb-4">links</h3>
                             <ul>
-                                <li class="mb-2"><a href="#">managed website</a></li>
-                                <li class="mb-2"><a href="#">managed reputation</a></li>
-                                <li class="mb-2"><a href="#">power tools</a></li>
-                                <li><a href="#">marketing service</a></li>
+                                <li class="mb-2"><a href="about.html">About Us</a></li>
+                                <li class="mb-2"><a id="categoryLinkFooter" href="#">Categories</a></li>
+                                <li class="mb-2"><a href="contact-us.html">Contact Us</a></li>
+                                <!-- <li><a href="#">marketing service</service-buttonquera></li> -->
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-3 offset-xl-1 col-lg-3">
+                        <div class="single-widge-home">
+                            <h3 class="mb-4">Services</h3>
+                            <ul>
+                                <li class="mb-2">
+                                    <button id="Sales & Marketing" class="service-button" style="background-color: transparent;" id><a href="">Sales & Marketing</a></li></button>
+                                    
+                                <li class="mb-2"><button id="Production & Engineering" class="service-button"><a id="categoryLinkFooter" href="">Production & Engineering</a></button></li>
+                                <li class="mb-2"><button id="Accounting & Finance" class="service-button"><a href="">Accounting & Finance</a></button></li>
+                                <!-- <li><a href="#">marketing service</a></li> -->
                             </ul>
                         </div>
                     </div>
@@ -218,27 +298,15 @@
                             <h3 class="mb-4">newsletter</h3>
                             <p class="mb-4">You can trust us. we only send promo offers, not a single.</p>
                             <form action="#">
-                                <input type="email" placeholder="Your email here" onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Your email here'" required>
-                                <button type="submit" class="template-btn">subscribe now</button>
+                                <input id="subscriberEmailInput" type="email" placeholder="Your email here"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email here'"
+                                    required>
+                                <button id="subscribebutton" type="submit" class="template-btn">subscribe
+                                    now</button>
                             </form>
                         </div>
                     </div>
-                    <div class="col-xl-3 offset-xl-1 col-lg-3">
-                        <div class="single-widge-home">
-                            <h3 class="mb-4">instagram feed</h3>
-                            <div class="feed">
-                                <img src="assets/images/feed1.jpg" alt="feed">
-                                <img src="assets/images/feed2.jpg" alt="feed">
-                                <img src="assets/images/feed3.jpg" alt="feed">
-                                <img src="assets/images/feed4.jpg" alt="feed">
-                                <img src="assets/images/feed5.jpg" alt="feed">
-                                <img src="assets/images/feed6.jpg" alt="feed">
-                                <img src="assets/images/feed7.jpg" alt="feed">
-                                <img src="assets/images/feed8.jpg" alt="feed">
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -255,10 +323,11 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="social-icons">
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                                <!-- <li><a href="#"><i class="fa fa-facebook"></i></a></li> -->
+                                <li><a href="https://www.linkedin.com/company/the-ezhire-contour/"><i
+                                            class="fa fa-linkedin"></i></a></li>
+                                <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
+                                <!-- <li><a href="#"><i class="fa fa-behance"></i></a></li> -->
                             </ul>
                         </div>
                     </div>
@@ -290,106 +359,18 @@
             });
         });
     </script>
+    <!-- <script src="assets/js/myjs.js"></script> -->
     <script type="module">
+        //  document.querySelectorAll('.dropdown-item').forEach(item => {
+        //     item.addEventListener('click', event => {
+        //         event.preventDefault();
+        //         document.getElementById('dropdownMenuButton').textContent = event.target.textContent;
 
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
-        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"
-        import { collection, getDocs, addDoc, Timestamp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"
-        import { query, orderBy, limit, where, onSnapshot } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"
-
-
-        const firebaseConfig = {
-            apiKey: "AIzaSyAGZDdTO2x0jRxamCL_VpxtsCH_AzBJEpQ",
-            authDomain: "ezhire-cb1e3.firebaseapp.com",
-            projectId: "ezhire-cb1e3",
-            storageBucket: "ezhire-cb1e3.appspot.com",
-            messagingSenderId: "97650938310",
-            appId: "1:97650938310:web:d1b074e103aa79138662c7",
-            measurementId: "G-L2F971LW4K"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-        const emailInput = document.getElementById('email');
-        const nameInput = document.getElementById('name');
-        const phoneInput = document.getElementById('phone');
-        var subjectInput = "";
-        const messageInput = document.getElementById('message');
-        async function addLeadToFirestore(email, name, phone, subject, message) {
-            try {
-                const collectionRef = await collection(db, "leads");
-
-                const newLead = {
-                    email,
-                    name,
-                    phone,
-                    subject,
-                    message,
-                    createdAt: Timestamp.now(),
-                };
-
-                const docRef = await addDoc(collectionRef, newLead);
-
-                console.log("Document written with ID:", docRef.id);
-                return true;
-            } catch (error) {
-                console.error("Error adding document:", error);
-                return false;
-            }
-        }
-
-        const submitButton = document.getElementById('submitButton');
-        submitButton.addEventListener('click', () => {
-            event.preventDefault();
-            if (emailInput.value == "" || nameInput.value == "" ||
-                phoneInput.value == ""
-            ) {
-                alert("Please fill the mandatory fields.")
-            }
-            else {
-                addLeadToFirestore(
-                    emailInput.value || null,
-                    nameInput.value || null,
-                    phoneInput.value || null,
-                    subjectInput|| null,
-                    messageInput.value || null
-                )
-                    .then((result) => {
-                        if (result) {
-                            alert("You'll be contacted shortly!");
-                            console.log("Lead added successfully!");
-                            emailInput.value = "";
-                            nameInput.value = "";
-                            phoneInput.value = "";
-                            subjectInput = "";
-                            messageInput.value = "";
-                            // Handle success scenario
-                        } else {
-                            alert("Some error occured!");
-                            console.error("Error adding lead!");
-                            // Handle error scenario
-                        }
-                    })
-                    .catch((error) => {
-                        console.error("Error adding lead:", error);
-                    });
-            }
-            // Prevent default form submission
-
-
-        });
-
-        document.querySelectorAll('.dropdown-item').forEach(item => {
-            item.addEventListener('click', event => {
-                event.preventDefault();
-                document.getElementById('dropdownMenuButton').textContent = event.target.textContent;
-
-                subjectInput = event.target.textContent;
+        //         subjectInput = event.target.textContent;
                 
-                console.log(event.target.textContent);
-            });
-        });
+        //         console.log(event.target.textContent);
+        //     });
+        // });
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
@@ -406,6 +387,8 @@
     <script src="assets/js/vendor/gmaps.min.js"></script>
     <script src="assets/js/vendor/ion.rangeSlider.js"></script>
     <script src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/dialog.js"></script>
+    <!-- <script type="module" src="assets/js/contactDropDown.js"></script> -->
 </body>
 
 </html>

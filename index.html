@@ -49,9 +49,18 @@
                 </div>
                 <div class="col-lg-10">
                     <div class="custom-navbar fixed-top">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                        <div class="navrow">
+                            <div class="col-lg-2"> <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="col-lg-8">
+                                <a href="index.html"><img class="logoimg" src="assets/images/navbarlogo.jpg" alt="logo"
+                                    style="width: 152px;height: 33;"></a>
+                            </div>
+
+                        </div>
+
                     </div>
                     <div class="main-menu">
                         <ul>
@@ -930,7 +939,7 @@
                     </div>
                 </div>
             </div> -->
-        </div>
+            </div>
     </section>
     <!-- News Area End -->
 
@@ -994,17 +1003,21 @@
                             <h3 class="mb-4">Services</h3>
                             <ul>
                                 <li class="mb-2">
-                                    <button id="Sales & Marketing" class="service-button" style="background-color: transparent;" id><a href="">Sales & Marketing</a></li></button>
-                                    
-                                <li class="mb-2"><button id="Production & Engineering" class="service-button"><a id="categoryLinkFooter" href="">Production & Engineering</a></button></li>
-                                <li class="mb-2"><button id="Accounting & Finance" class="service-button"><a href="">Accounting & Finance</a></button></li>
+                                    <button id="Sales & Marketing" class="service-button"
+                                        style="background-color: transparent;" id><a href="">Sales & Marketing</a>
+                                </li></button>
+
+                                <li class="mb-2"><button id="Production & Engineering" class="service-button"><a
+                                            id="categoryLinkFooter" href="">Production & Engineering</a></button></li>
+                                <li class="mb-2"><button id="Accounting & Finance" class="service-button"><a
+                                            href="">Accounting & Finance</a></button></li>
                                 <!-- <li><a href="#">marketing service</a></li> -->
                             </ul>
                         </div>
                     </div>
                     <div class="col-xl-5 offset-xl-1 col-lg-6">
                         <div class="single-widget-home mb-5 mb-lg-0">
-                            <h3 class="mb-4">newsletter</h3>
+                            <h3 class="mb-4 newslettertext">newsletter</h3>
                             <p class="mb-4">You can trust us. we only send promo offers, not a single.</p>
                             <form action="#">
                                 <input id="subscriberEmailInputFooter" type="email" placeholder="Your email here"
@@ -1062,10 +1075,10 @@
                     blogLink.textContent = 'Read More';
                     // Create image element (if image URL exists)
                     // if (blog.imageUrl) {
-                        const blogImage = document.createElement('img');
-                        blogImage.src = blog.imageurl;
-                        
-                        blogCard.appendChild(blogImage);
+                    const blogImage = document.createElement('img');
+                    blogImage.src = blog.imageurl;
+
+                    blogCard.appendChild(blogImage);
                     // }
 
                     const blogTitle = document.createElement('h4');
@@ -1075,7 +1088,7 @@
 
                     const blogDate = document.createElement('p');
                     blogDate.textContent = blog.date;
-                    
+
                     blogCard.appendChild(blogDate);
                     blogCard.appendChild(blogLink);
                     blogsContainer.appendChild(blogCard);
@@ -1099,152 +1112,152 @@
         })
     </script>
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
-        import { getFirestore } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"
-        import { collection, getDocs, addDoc, Timestamp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"
-        import { query, orderBy, limit, where, onSnapshot } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"
+        // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
+        // import { getFirestore } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"
+        // import { collection, getDocs, addDoc, Timestamp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"
+        // import { query, orderBy, limit, where, onSnapshot } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js"
 
 
-        const firebaseConfig = {
-            apiKey: "AIzaSyAGZDdTO2x0jRxamCL_VpxtsCH_AzBJEpQ",
-            authDomain: "ezhire-cb1e3.firebaseapp.com",
-            projectId: "ezhire-cb1e3",
-            storageBucket: "ezhire-cb1e3.appspot.com",
-            messagingSenderId: "97650938310",
-            appId: "1:97650938310:web:d1b074e103aa79138662c7",
-            measurementId: "G-L2F971LW4K"
-        };
+        // const firebaseConfig = {
+        //     apiKey: "AIzaSyAGZDdTO2x0jRxamCL_VpxtsCH_AzBJEpQ",
+        //     authDomain: "ezhire-cb1e3.firebaseapp.com",
+        //     projectId: "ezhire-cb1e3",
+        //     storageBucket: "ezhire-cb1e3.appspot.com",
+        //     messagingSenderId: "97650938310",
+        //     appId: "1:97650938310:web:d1b074e103aa79138662c7",
+        //     measurementId: "G-L2F971LW4K"
+        // };
 
         // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-        var category = "";
-        const emailInput = document.getElementById('email');
-        const subscriberEmailInput = document.getElementById('subscriberEmailInput');
-        const subscriberEmailInputFooter = document.getElementById('subscriberEmailInputFooter');
-        const nameInput = document.getElementById('name');
-        const phoneInput = document.getElementById('phone');
-        const subjectInput = document.getElementById('subject');
-        const messageInput = document.getElementById('message');
-        const submitButton = document.getElementById('submitButton');
-        const subscribebutton = document.getElementById('subscribebutton');
-        const subscribebuttonfooter = document.getElementById('subscribebuttonfooter');
-        function subscribe(email) {
-            addSubscriberToFirestore(
-                email || null,
+        // const app = initializeApp(firebaseConfig);
+        // const db = getFirestore(app);
+        // var category = "";
+        // const emailInput = document.getElementById('email');
+        // const subscriberEmailInput = document.getElementById('subscriberEmailInput');
+        // const subscriberEmailInputFooter = document.getElementById('subscriberEmailInputFooter');
+        // const nameInput = document.getElementById('name');
+        // const phoneInput = document.getElementById('phone');
+        // const subjectInput = document.getElementById('subject');
+        // const messageInput = document.getElementById('message');
+        // const submitButton = document.getElementById('submitButton');
+        // const subscribebutton = document.getElementById('subscribebutton');
+        // const subscribebuttonfooter = document.getElementById('subscribebuttonfooter');
+        // function subscribe(email) {
+        //     addSubscriberToFirestore(
+        //         email || null,
 
-            )
-                .then((result) => {
-                    if (result) {
-                        alert("You have successfully subscribed to our newsletter!");
-                        dialog.close();
-                        console.log("subscriber added successfully!");
-                        email = "";
-                        // Handle success scenario
-                    } else {
-                        alert("Some error occured!");
-                        console.error("Error adding subscriber!");
-                        // Handle error scenario
-                    }
-                })
-                .catch((error) => {
-                    console.error("Error adding subscriber:", error);
-                });
-        }
-        async function addLeadToFirestore(email, name, phone, subject, message) {
-            try {
-                const collectionRef = await collection(db, "leads");
+        //     )
+        //         .then((result) => {
+        //             if (result) {
+        //                 alert("You have successfully subscribed to our newsletter!");
+        //                 dialog.close();
+        //                 console.log("subscriber added successfully!");
+        //                 email = "";
+        //                 // Handle success scenario
+        //             } else {
+        //                 alert("Some error occured!");
+        //                 console.error("Error adding subscriber!");
+        //                 // Handle error scenario
+        //             }
+        //         })
+        //         .catch((error) => {
+        //             console.error("Error adding subscriber:", error);
+        //         });
+        // }
+        // async function addLeadToFirestore(email, name, phone, subject, message) {
+        //     try {
+        //         const collectionRef = await collection(db, "leads");
 
-                const newLead = {
-                    email,
-                    name,
-                    phone,
-                    subject,
-                    message,
-                    createdAt: Timestamp.now(),
-                };
+        //         const newLead = {
+        //             email,
+        //             name,
+        //             phone,
+        //             subject,
+        //             message,
+        //             createdAt: Timestamp.now(),
+        //         };
 
-                const docRef = await addDoc(collectionRef, newLead);
+        //         const docRef = await addDoc(collectionRef, newLead);
 
-                console.log("Document written with ID:", docRef.id);
-                return true;
-            } catch (error) {
-                console.error("Error adding document:", error);
-                return false;
-            }
-        }
-        async function addSubscriberToFirestore(email) {
-            try {
-                const collectionRef = await collection(db, "subscribers");
+        //         console.log("Document written with ID:", docRef.id);
+        //         return true;
+        //     } catch (error) {
+        //         console.error("Error adding document:", error);
+        //         return false;
+        //     }
+        // }
+        // async function addSubscriberToFirestore(email) {
+        //     try {
+        //         const collectionRef = await collection(db, "subscribers");
 
-                const newLead = {
-                    email,
+        //         const newLead = {
+        //             email,
 
-                    createdAt: Timestamp.now(),
-                };
+        //             createdAt: Timestamp.now(),
+        //         };
 
-                const docRef = await addDoc(collectionRef, newLead);
+        //         const docRef = await addDoc(collectionRef, newLead);
 
-                console.log("Document written with ID:", docRef.id);
-                return true;
-            } catch (error) {
-                console.error("Error adding document:", error);
-                return false;
-            }
-        }
+        //         console.log("Document written with ID:", docRef.id);
+        //         return true;
+        //     } catch (error) {
+        //         console.error("Error adding document:", error);
+        //         return false;
+        //     }
+        // }
 
-        submitButton.addEventListener('click', () => {
-            event.preventDefault(); // Prevent default form submission
-            if (nameInput.value == "") {
-                alert("Name is mandatory.");
-            }
-            else if (emailInput.value == "") {
-                alert("E-mail is mandatory.");
-            }
-            else {
-                addLeadToFirestore(
-                    emailInput.value || null,
-                    nameInput.value || null,
-                    phoneInput.value || null,
-                    category || null,
-                    messageInput.value || null
-                )
-                    .then((result) => {
-                        if (result) {
-                            alert("You'll be contacted shortly!");
-                            // dialog.close();
-                            console.log("Lead added successfully!");
-                            emailInput.value = "";
-                            nameInput.value = "";
-                            phoneInput.value = "";
-                            subjectInput.value = "";
-                            messageInput.value = "";
-                            category = "";
-                            // Handle success scenario
-                        } else {
-                            alert("Some error occured!");
-                            console.error("Error adding lead!");
-                            // Handle error scenario
-                        }
-                    })
-                    .catch((error) => {
-                        console.error("Error adding lead:", error);
-                    });
-            }
+        // submitButton.addEventListener('click', () => {
+        //     event.preventDefault(); // Prevent default form submission
+        //     if (nameInput.value == "") {
+        //         alert("Name is mandatory.");
+        //     }
+        //     else if (emailInput.value == "") {
+        //         alert("E-mail is mandatory.");
+        //     }
+        //     else {
+        //         addLeadToFirestore(
+        //             emailInput.value || null,
+        //             nameInput.value || null,
+        //             phoneInput.value || null,
+        //             category || null,
+        //             messageInput.value || null
+        //         )
+        //             .then((result) => {
+        //                 if (result) {
+        //                     alert("You'll be contacted shortly!");
+        //                     // dialog.close();
+        //                     console.log("Lead added successfully!");
+        //                     emailInput.value = "";
+        //                     nameInput.value = "";
+        //                     phoneInput.value = "";
+        //                     subjectInput.value = "";
+        //                     messageInput.value = "";
+        //                     category = "";
+        //                     // Handle success scenario
+        //                 } else {
+        //                     alert("Some error occured!");
+        //                     console.error("Error adding lead!");
+        //                     // Handle error scenario
+        //                 }
+        //             })
+        //             .catch((error) => {
+        //                 console.error("Error adding lead:", error);
+        //             });
+        //     }
 
-        });
-        subscribebutton.addEventListener('click', () => {
-            event.preventDefault();
-            console.log(subscriberEmailInput.value);
-            subscribe(subscriberEmailInput.value);
+        // });
+        // subscribebutton.addEventListener('click', () => {
+        //     event.preventDefault();
+        //     console.log(subscriberEmailInput.value);
+        //     subscribe(subscriberEmailInput.value);
 
-        });
-        subscribebuttonfooter.addEventListener('click', () => {
-            event.preventDefault();
-            console.log(subscriberEmailInputFooter.value);
-            subscribe(subscriberEmailInputFooter.value);
+        // });
+        // subscribebuttonfooter.addEventListener('click', () => {
+        //     event.preventDefault();
+        //     console.log(subscriberEmailInputFooter.value);
+        //     subscribe(subscriberEmailInputFooter.value);
 
-        });
+        // });
         document.addEventListener("DOMContentLoaded", () => {
             function counter(id, start, end, duration) {
                 let obj = document.getElementById(id),
@@ -1271,30 +1284,30 @@
         const categoryLink = document.getElementById('categoryLink');
         const categoryLinkFooter = document.getElementById('categoryLinkFooter');
         const exploreMoreButton = document.getElementById('exploreMoreButton');
-        const categoryCard = document.querySelectorAll('.service-card');
-        const serviceButton = document.querySelectorAll('.service-button');
-        var cardTitleDisplay = document.getElementById('cardTitleDisplay');
-        var cardIdDisplay = document.getElementById('cardIdDisplay');
-        var dialog = document.getElementById('cardDialog');
-        serviceButton.forEach((button)=>{
-            
-            button.addEventListener('click',(e)=>{
+        // const categoryCard = document.querySelectorAll('.service-card');
+        // const serviceButton = document.querySelectorAll('.service-button');
+        // var cardTitleDisplay = document.getElementById('cardTitleDisplay');
+        // var cardIdDisplay = document.getElementById('cardIdDisplay');
+        // var dialog = document.getElementById('cardDialog');
+        // serviceButton.forEach((button)=>{
 
-                e.preventDefault();
-                const buttonId = button.id;
-                cardIdDisplay = document.getElementById('cardIdDisplay');
-                 cardTitleDisplay = document.getElementById('cardTitleDisplay');
-                 
+        //     button.addEventListener('click',(e)=>{
 
-                cardIdDisplay.textContent = `${buttonId}`;
-                category = button.id;
-                console.log("hey");
-                dialog.showModal();
-            });
-        });
-        dialog.querySelector('button').addEventListener('click', () => {
-                    dialog.close(); // Close the dialog box on button click
-                });
+        //         e.preventDefault();
+        //         const buttonId = button.id;
+        //         cardIdDisplay = document.getElementById('cardIdDisplay');
+        //          cardTitleDisplay = document.getElementById('cardTitleDisplay');
+
+
+        //         cardIdDisplay.textContent = `${buttonId}`;
+        //         category = button.id;
+        //         console.log("hey");
+        //         dialog.showModal();
+        //     });
+        // });
+        // dialog.querySelector('button').addEventListener('click', () => {
+        //             dialog.close(); // Close the dialog box on button click
+        //         });
         categoryLink.addEventListener('click', function (event) {
             event.preventDefault();
             window.scrollTo({ top: document.body.scrollHeight / 5.5, behavior: 'smooth' });
@@ -1311,54 +1324,54 @@
 
         });
 
-        categoryCard.forEach(card => {
+        // categoryCard.forEach(card => {
 
-            card.addEventListener('click', (event) => {
-                const cardId = card.id;
-                category = card.id;
-                 dialog = document.getElementById('cardDialog');
-                 cardIdDisplay = document.getElementById('cardIdDisplay');
-                 cardTitleDisplay = document.getElementById('cardTitleDisplay');
-                const clickedElement = event.target;
+        //     card.addEventListener('click', (event) => {
+        //         const cardId = card.id;
+        //         category = card.id;
+        //          dialog = document.getElementById('cardDialog');
+        //          cardIdDisplay = document.getElementById('cardIdDisplay');
+        //          cardTitleDisplay = document.getElementById('cardTitleDisplay');
+        //         const clickedElement = event.target;
 
-                cardIdDisplay.textContent = `${cardId}`;
-                dialog.querySelector('button').addEventListener('click', () => {
-                    dialog.close(); // Close the dialog box on button click
-                });
-                console.log("Clicked card title: ", cardId);
-                dialog.showModal();
-            });
-        });
+        //         cardIdDisplay.textContent = `${cardId}`;
+        //         dialog.querySelector('button').addEventListener('click', () => {
+        //             dialog.close(); // Close the dialog box on button click
+        //         });
+        //         console.log("Clicked card title: ", cardId);
+        //         dialog.showModal();
+        //     });
+        // });
 
     </script>
     <script type="module">
 
 
-        async function getDocumentsFromCollection(collectionName) {
-            const collectionRef = collection(db, collectionName);
-            const querySnapshot = await getDocs(collectionRef);
-            const documents = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })); // Extract data from each document
-            console.log("Documents:", documents);
-        }
-        async function addLeadToFirestore(email, name, phone, type) {
-            try {
-                const collectionRef = collection(db, "leads"); // Reference to "leads" collection
+        // async function getDocumentsFromCollection(collectionName) {
+        //     const collectionRef = collection(db, collectionName);
+        //     const querySnapshot = await getDocs(collectionRef);
+        //     const documents = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })); // Extract data from each document
+        //     console.log("Documents:", documents);
+        // }
+        // async function addLeadToFirestore(email, name, phone, type) {
+        //     try {
+        //         const collectionRef = collection(db, "leads"); // Reference to "leads" collection
 
-                const newLead = {
-                    email,
-                    name,
-                    phone,
-                    type,
-                    createdAt: Timestamp.now(), // Add a timestamp for creation time (optional)
-                };
+        //         const newLead = {
+        //             email,
+        //             name,
+        //             phone,
+        //             type,
+        //             createdAt: Timestamp.now(), // Add a timestamp for creation time (optional)
+        //         };
 
-                const docRef = await addDoc(collectionRef, newLead);
-                console.log("Document written with ID:", docRef.id);
-            } catch (error) {
-                console.error("Error adding document:", error);
-            }
-        }
-        getDocumentsFromCollection("leads");
+        //         const docRef = await addDoc(collectionRef, newLead);
+        //         console.log("Document written with ID:", docRef.id);
+        //     } catch (error) {
+        //         console.error("Error adding document:", error);
+        //     }
+        // }
+        // getDocumentsFromCollection("leads");
     </script>
 
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
@@ -1368,6 +1381,7 @@
     <script src="assets/js/vendor/jquery.nice-select.min.js"></script>
     <script src="assets/js/vendor/ion.rangeSlider.js"></script>
     <script src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/dialog.js"></script>
 </body>
 
 </html>
