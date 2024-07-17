@@ -446,10 +446,10 @@
                             <h3 class="mb-4">Services</h3>
                             <ul>
                                 <li class="mb-2">
-                                    <button id="Sales & Marketing" class="service-button" style="background-color: transparent;" id><a href="">Sales & Marketing</a></li></button>
+                                    <p id="Sales & Marketing" class="service-button" style="background-color: transparent;" id><a href="">Sales & Marketing</a></li></p>
                                     
-                                <li class="mb-2"><button id="Production & Engineering" class="service-button"><a id="categoryLinkFooter" href="">Production & Engineering</a></button></li>
-                                <li class="mb-2"><button id="Accounting & Finance" class="service-button"><a href="">Accounting & Finance</a></button></li>
+                                <li class="mb-2"><p id="Production & Engineering" class="service-button"><a id="categoryLinkFooter" href="">Production & Engineering</a></p></li>
+                                <li class="mb-2"><p id="Accounting & Finance" class="service-button"><a href="">Accounting & Finance</a></p></li>
                                 <!-- <li><a href="#">marketing service</a></li> -->
                             </ul>
                         </div>
@@ -497,7 +497,64 @@
         </div>
     </footer>
     <!-- Footer Area End -->
+    <dialog id="cardDialog">
+        <form action="">
+            <div class="container mt-2">
+                <h4>Send Enquiry</h4>
+                <p id="cardIdDisplay"></p>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="1"
+                                placeholder="Enter your message"></textarea>
+                        </div>
+                    </div>
 
+                </form>
+            </div>
+            <!-- <h4>Send Enquiry</h4>
+            <p id="cardIdDisplay"></p>
+            <div class="">
+                <input type="text" id="name" placeholder="Enter your name" onblur="this.placeholder = 'Enter your name'"
+                    required>
+                <input type="email" id="email" placeholder="Enter email address" onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter email address'" required> -->
+
+            <!-- <input type="text" id="subject" placeholder="Enter subject" onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter subject'" required> -->
+
+            <!-- 
+            </div>
+            <div style="height: .6em;"></div>
+            <div class="">
+                <input type="text" id="phone" placeholder="Enter phone number" onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter phone number'" required>
+                <input name="message" id="message" placeholder="Enter Message" onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Enter Message'" required>
+
+            </div> -->
+        </form>
+        <div class="forbuttonrow">
+            <button id="closeDialog" class="mt-2">Close</button>
+            <div style="width: 0.3rem;"></div>
+            <button id="submitButton" class="mt-2">Get a call!</button>
+        </div>
+    </dialog>
 
     <!-- Javascript -->
     <script>

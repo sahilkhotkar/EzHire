@@ -236,6 +236,15 @@ textarea:focus {
     }
 }
 
+.main-menu ul li a:hover{
+    /* text-decoration: underline; */
+  
+    animation-duration: 2ms;
+    color: #795fff;
+    /* transition: width 0.3s ease-in-out; */
+    transition-duration: 1s;
+}
+
 .main-menu ul li a {
     color: white;
     font-family: "Open Sans", sans-serif;
@@ -304,6 +313,12 @@ textarea:focus {
 
     .main-menu .menu-btn .login {
         display: block
+    }
+}
+
+@media (max-width:991px){
+    .main-menu ul li a{
+        color: black;
     }
 }
 
