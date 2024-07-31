@@ -4187,7 +4187,19 @@ nav.black>ul>li>a {
       display: inline-block;
     }
     .process__item {
+        
+        /* border: 2px solid red; */
       width: 33%;
+      display: inline-block;
+    }
+  }
+  @media (max-width: 768px) {
+    .process {
+      display: inline-block;
+    }
+    .process__item {
+        /* border: 2px solid yellow; */
+      width: 100%;
       display: inline-block;
     }
   }
@@ -4198,6 +4210,7 @@ nav.black>ul>li>a {
       justify-content: space-between;
     }
     .process__item {
+        /* border: 2px solid blue; */
       width: 100%;
     }
     .process__item:not(:last-of-type)::after {
