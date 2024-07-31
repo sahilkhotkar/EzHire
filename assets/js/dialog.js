@@ -129,43 +129,43 @@ submitButton.addEventListener("click", (event) => {
       });
   }
 });
-submitButton.addEventListener("click", (event) => {
-  event.preventDefault();
-  if (nameInput.value == "") {
-    alert("Name is mandatory.");
-  } else if (emailInput.value == "") {
-    alert("E-mail is mandatory.");
-  } else {
-    addLeadToFirestore(
-      emailInput.value || null,
-      nameInput.value || null,
-      phoneInput.value || null,
-      category || null,
-      messageInput.value || null
-    )
-      .then((result) => {
-        if (result) {
-          alert("You'll be contacted shortly!");
-          // dialog.close();
-          console.log("Lead added successfully!");
-          emailInput.value = "";
-          nameInput.value = "";
-          phoneInput.value = "";
-          subjectInput.value = "";
-          messageInput.value = "";
-          category = "";
-          // Handle success scenario
-        } else {
-          alert("Some error occured!");
-          console.error("Error adding lead!");
-          // Handle error scenario
-        }
-      })
-      .catch((error) => {
-        console.error("Error adding lead:", error);
-      });
-  }
-});
+// submitButton.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   if (nameInput.value == "") {
+//     alert("Name is mandatory.");
+//   } else if (emailInput.value == "") {
+//     alert("E-mail is mandatory.");
+//   } else {
+//     addLeadToFirestore(
+//       emailInput.value || null,
+//       nameInput.value || null,
+//       phoneInput.value || null,
+//       category || null,
+//       messageInput.value || null
+//     )
+//       .then((result) => {
+//         if (result) {
+//           alert("You'll be contacted shortly!");
+//           // dialog.close();
+//           console.log("Lead added successfully!");
+//           emailInput.value = "";
+//           nameInput.value = "";
+//           phoneInput.value = "";
+//           subjectInput.value = "";
+//           messageInput.value = "";
+//           category = "";
+//           // Handle success scenario
+//         } else {
+//           alert("Some error occured!");
+//           console.error("Error adding lead!");
+//           // Handle error scenario
+//         }
+//       })
+//       .catch((error) => {
+//         console.error("Error adding lead:", error);
+//       });
+//   }
+// });
 
 async function addLeadToFirestore(email, name, phone, subject, message) {
   try {
