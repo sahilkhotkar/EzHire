@@ -109,7 +109,7 @@ submitButton.addEventListener("click", (event) => {
       .then((result) => {
         if (result) {
           alert("You'll be contacted shortly!");
-          // dialog.close();
+          
           console.log("Lead added successfully!");
           emailInput.value = "";
           nameInput.value = "";
@@ -118,6 +118,7 @@ submitButton.addEventListener("click", (event) => {
           messageInput.value = "";
           category = "";
           // Handle success scenario
+        
         } else {
           alert("Some error occured!");
           console.error("Error adding lead!");
@@ -127,6 +128,7 @@ submitButton.addEventListener("click", (event) => {
       .catch((error) => {
         console.error("Error adding lead:", error);
       });
+      dialog.close();
   }
 });
 // submitButton.addEventListener("click", (event) => {
