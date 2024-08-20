@@ -4,9 +4,17 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Slab&display=swap");
 
 body {
+    max-width: 100%;
+    overflow-x: hidden;
     color: #777;
     font-family: "Open Sans", sans-serif;
     font-weight: 400
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .blog-card a {
@@ -458,9 +466,9 @@ textarea:focus {
     margin-left: 30px
 }
 
-@media (min-width:768px){
+@media (min-width:768px) {
     .header-area.main-header {
-        padding: 30px 
+        padding: 30px
     }
 }
 
@@ -508,6 +516,7 @@ textarea:focus {
         margin-top: 15px
     }
 }
+
 /* .aboutus{
     background-image: url("../images/about.jpg");
     background-size: cover;
@@ -524,11 +533,13 @@ textarea:focus {
     background-position: center;
     background-size: cover
 }
+
 /*sahil*/
 @media (min-width: 768px) and (max-width: 991.98px) {
     .banner-area .banner-bg {
         height: 500px
     }
+
     .header-area.main-header {
         padding: 0;
     }
@@ -544,7 +555,8 @@ textarea:focus {
 
 @media (max-width: 575.98px) {
     .banner-area .banner-bg {
-        height: 300px
+        height: 300px;
+        margin-top:2em;
     }
 }
 
@@ -1591,13 +1603,12 @@ textarea:focus {
 
 .header-area.single-page {
     background-color: #b0b0b0;
-    background-image: url("../images/page-header-bg.jpg");
+    background-image: url("../images/page-header-about.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
     z-index: 1
-
 }
 
 .header-area.single-page:after {
@@ -1617,6 +1628,42 @@ textarea:focus {
 
 .header-area.single-page .page-title h2,
 .header-area.single-page .page-title p {
+    color: #fff
+}
+
+.single-team:hover .hover-state {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    visibility: visible
+}
+
+.header-area.single-page-about {
+    background-color: #b0b0b0;
+    background-image: url("../images/page-header-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1
+}
+
+.header-area.single-page-about:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 2, 12, 0.7);
+    z-index: -1
+}
+
+.header-area.single-page-about .page-title {
+    padding: 140px 0 200px
+}
+
+.header-area.single-page-about .page-title h2,
+.header-area.single-page-about .page-title p {
     color: #fff
 }
 
@@ -4035,28 +4082,28 @@ form .template-btn {
     display: flex;
     padding: 0;
     margin: 0;
-    
+
     animation: cambio 10s infinite linear;
-    
+
 }
 
 .slider li {
     list-style: none;
     flex: 0 0 auto;
-    
+
     padding: 0 30px;
-    
+
 }
 
 .slider img {
     width: 150px;
-    
+
     height: 150px;
-    
+
     object-fit: contain;
-  
+
     display: block;
-    
+
 }
 
 .main-menu.sticky {
@@ -4064,7 +4111,7 @@ form .template-btn {
     top: 0;
     width: 100%;
     z-index: 1000;
-    
+
 }
 
 @keyframes cambio {
@@ -4329,6 +4376,45 @@ nav.black>ul>li>a {
     color: rgba(0, 0, 0, 0.4);
     padding-bottom: 10px;
 }
+.tvision-mission-wrapperwo h1 {
+    text-transform: capitalize;
+}
+
+.vision-mission-wrapper h1:before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 2px;
+    content: "";
+    background-color: rgb(121, 95, 255);
+}
+
+.vision-mission-wrapper h1 span {
+    font-size: 13px;
+    font-weight: 500;
+    /* text-transform: uppercase; */
+    text-transform: none;
+    letter-spacing: 1px;
+    line-height: 3em;
+    padding-left: 0.25em;
+    color: rgba(0, 0, 0, 0.4);
+    padding-bottom: 10px;
+}
+
+.vision-mission-wrapper h1  {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    text-transform: none;
+    /* font-family: "Raleway", sans-serif; */
+    font-weight: 300;
+    font-size: 32px;
+    color: #080808;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0banner-bgs;
+}
 
 .alt-two h1 {
     text-align: center;
@@ -4451,3 +4537,11 @@ dialog .container {
 }
 
 
+.vision-icon {
+    height: 45px;
+    width: 45px;
+    margin-right: 10px;
+    /* Adjust this value to control the space between the image and the text */
+    vertical-align: middle;
+    /* Aligns the image vertically with the text */
+}
