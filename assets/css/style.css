@@ -392,7 +392,7 @@ textarea:focus {
 
     right: 0px;
     background: #795fff;
-    padding: 7px 10px;
+    padding: 10px 10px;
     /* -webkit-border-radius: 3px; */
     /* -moz-border-radius: 3px; */
     /* -ms-border-radius: 3px; */
@@ -446,9 +446,7 @@ textarea:focus {
     scale: 0.8;
 }
 
-.header-area.main-header {
-    padding: 30px 0
-}
+
 
 .header-top {
     position: relative;
@@ -458,6 +456,12 @@ textarea:focus {
 
 .header-top .template-btn {
     margin-left: 30px
+}
+
+@media (min-width:768px){
+    .header-area.main-header {
+        padding: 30px 
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -520,16 +524,21 @@ textarea:focus {
     background-position: center;
     background-size: cover
 }
-
+/*sahil*/
 @media (min-width: 768px) and (max-width: 991.98px) {
     .banner-area .banner-bg {
         height: 500px
     }
+    .header-area.main-header {
+        padding: 0;
+    }
+
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
     .banner-area .banner-bg {
-        height: 350px
+        margin-top: 5%;
+        /* height: 350px */
     }
 }
 
@@ -4440,3 +4449,5 @@ dialog .container {
 .container {
     padding: 0 1rem;
 }
+
+
