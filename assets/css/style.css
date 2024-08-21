@@ -4086,7 +4086,9 @@ form .template-btn {
     animation: cambio 20s infinite linear;
 
 }
-
+.white-bg{
+    
+}
 .slider li {
     list-style: none;
     flex: 0 0 auto;

@@ -31,7 +31,7 @@
     <!-- Preloader End -->
 
     <!-- Header Area Starts -->
-    <header class="header-area single-page">
+    <header class="main-header header-area single-page">
         <div class="header-top">
             <div class="container">
                 <div class="row">
@@ -360,6 +360,19 @@
                     link.html('Select one option' + icon);
                 }
             });
+        });
+        window.addEventListener('scroll', function () {
+            var navbar = document.querySelector('.main-header');
+            if (window.scrollY > 100) {
+              
+                navbar.classList.add('sticky');
+                navbar.classList.add('fixed-top');
+                navbar.classList.add('white-bg');
+            } else {
+                navbar.classList.remove('sticky');
+                navbar.classList.remove('fixed-top');
+                navbar.classList.remove('white-bg');
+            }
         });
     </script>
     <!-- <script src="assets/js/myjs.js"></script> -->
