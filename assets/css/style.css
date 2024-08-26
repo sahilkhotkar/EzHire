@@ -4253,7 +4253,15 @@ nav.black>ul>li>a {
 .process__item:hover {
     background: #f2f2f2;
 }
-
+.courtesy-text {
+    font-size: 0.8em;
+}
+.courtesy-text a {
+    margin-top: 2rem;
+    font-size:1em;
+    color: white;
+    text-decoration: none;
+}
 .process__item:hover .process__number {
     transform: translateY(5px);
     color: #003c71;
